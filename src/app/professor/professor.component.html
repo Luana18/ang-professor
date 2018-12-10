@@ -1,0 +1,9 @@
+<h2>Professores</h2>
+  <ul class="professores">
+    <li *ngFor="let professor of professores" [class.selected]="professor === selectedProfessor" (click)="onSelect(professor)">
+      <span class="badge">{{professor.id}}</span> {{professor.nome}}
+    </li>
+  </ul>
+
+
+<app-professor-detail [professor]="selectedProfessor"></app-professor-detail>
